@@ -56,7 +56,7 @@ html{
 }
 .code-window{
   width: 80vw;
-  height: 200px;
+  height: 80vh;
   overflow: scroll;
   background: black;
   border: 15px solid black;
@@ -67,8 +67,20 @@ html{
 .code-window p{
   font-family: 'Source Code Pro', monospace;
   color: white;
-  font-size: 1.6rem;
+	width: 0;
+	margin-bottom: 2px;
+  font-size: 1rem;
+	letter-spacing: 0.05em;
+	white-space: nowrap;
+	overflow: hidden;
+	border-right: transparent;
+	animation: typing 7s steps(60, end);
+	animation-fill-mode: forwards;
 }
 .code-window .tag{
-  color: #E8793A;
+  color: coral;
+}
+@keyframes typing{
+	from { width: 0 }
+	to { width: 100% }
 }
