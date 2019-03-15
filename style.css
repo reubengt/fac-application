@@ -55,9 +55,11 @@ html{
   align-items: center;
 }
 .code-window{
+	display: flex;
+	flex-direction: column;
   width: 80vw;
   height: 80vh;
-  overflow: scroll;
+  overflow: hidden;
   background: black;
   border: 15px solid black;
   margin:0 auto;
@@ -67,14 +69,17 @@ html{
 .code-window p{
   font-family: 'Source Code Pro', monospace;
   color: white;
-	width: 0;
-	margin-bottom: 2px;
+	width: auto;
+	margin-bottom: 0.2rem;
   font-size: 1rem;
 	letter-spacing: 0.05em;
-	white-space: nowrap;
+	line-height: 1.4rem;
+	padding-left: 4ch;
+	text-indent: -4ch;
 	overflow: hidden;
+	/* white-space: nowrap; */
 	border-right: transparent;
-	animation: typing 7s steps(60, end);
+	/* animation: typing 7s steps(60, end); */
 	animation-fill-mode: forwards;
 }
 .code-window .tag{
@@ -83,4 +88,35 @@ html{
 @keyframes typing{
 	from { width: 0 }
 	to { width: 100% }
+}
+.main-page{
+	height: 100vh;
+	background-color: indianred;
+}
+.main-page nav{
+	width: 100%;
+	height: 100px;
+	display: flex;
+	justify-content: space-between;
+	align-items: stretch;
+	background-color: goldenrod;
+}
+.freecodecamp{
+	background-image: url(images/freecodecamp.svg) no-repeat;
+	background-size: 100%;
+	width: 30vw;
+}
+.codewars{
+	background: url(images/codewars.svg) no-repeat;
+	background-size: 100%;
+	height: 100%;
+	width: auto;
+
+}
+.github{
+	background: url(images/github.svg) no-repeat;
+	background-size: 100%;
+  height: 100%;
+	width: auto;
+
 }
