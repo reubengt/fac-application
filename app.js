@@ -14,16 +14,15 @@ let lineIndex=0;
 function typeline() {
   let line=codelines[lineIndex];
   let text=codelinesCopy[lineIndex];
-  console.log(text)
   let i=0;
   let typing=setInterval(() => {
   if(text[i]!=undefined){
     line.textContent+=text[i];
     i++;
    }
-  }, 80);
+ }, 40);
   lineIndex++;
-  intervalTime=text.length*80+600;
+  intervalTime=text.length*40+300;
   //recursively calls the function for the next line with a timeout interval slightly greater than the time taken to display the previous line
   if(lineIndex<codelines.length){
     setTimeout(typeline, intervalTime);
