@@ -51,32 +51,29 @@ html{
 /*landing page (header) styles*/
 .landing-page{
   height: 100vh;
-  background:#BADA55;
+  background: black;
   display: flex;
-	flex-direction: column;
+	flex-direction: row;
+	flex-wrap: wrap;
 	justify-content: center;
   align-items: center;
 }
 .code-window{
-	display: flex;
-	flex-direction: column;
   width: 80vw;
-  height: 80vh;
+  height: auto;
   overflow: hidden;
   background: black;
-  border: 15px solid black;
   margin:0 auto;
-  border-radius: 10px;
   box-shadow: 0 0 25px 8px rgba(0, 0, 0, 0.3);
 }
 .code-window p{
   font-family: 'Source Code Pro', monospace;
-  color: white;
+  color: #1ec503;
 	width: auto;
 	margin-bottom: 0.2rem;
   font-size: 1rem;
 	letter-spacing: 0.05em;
-	line-height: 1.4rem;
+	line-height: 1.2rem;
 	padding-left: 4ch;
 	text-indent: -4ch;
 	overflow: hidden;
@@ -84,20 +81,22 @@ html{
 .scrollbtn{
 	outline: none;
 	font-family: 'Source Code Pro', monospace;
-	margin-top: 20px;
+	/*extra left and right margin to make sure the button wraps to new line*/
+	margin: 0px 50px 10vw;
+	align-self: flex-end;
 	font-size: 1.6rem;
   border: solid 2px transparent;
 	border-radius: 4px;
 	padding: 0.5rem 1rem;
-	color: #ffffff;
-	background-color: #2A4494;
+	color: white;
+	background-color: #2E294E;
 	box-shadow: 0 0 25px 4px rgba(0, 0, 0, 0.2);
 }
 .scrollbtn:active{
 	transform: scale(0.98);
 }
 .scrollbtn:hover {
-  color: #2A4494;
+  color: #2E294E;
   border-color: currentColor;
   background-color: white;
 }
