@@ -30,6 +30,7 @@ function typeline() {
   }
   else{
     scrollbtn.style.opacity = "1.0";
+    scrollbtn.style.transition = "opacity 2.0s";
   }
 }
 typeline();
