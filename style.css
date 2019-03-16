@@ -75,7 +75,7 @@ html{
 	margin-bottom: 0.6rem;
   font-size: 2.2rem;
 	letter-spacing: 0.15rem;
-	line-height: 3.6rem;
+	line-height: 3rem;
 	padding-left: 4ch;
 	text-indent: -4ch;
 	overflow: hidden;
@@ -88,7 +88,6 @@ html{
 	font-family: 'Source Code Pro', monospace;
 	/*extra left and right margin to make sure the button wraps to new line*/
 	margin: 0px 10vw;
-	/* align-self: flex-end; */
 	font-size: 2.2rem;
 	border-radius: 4px;
 	padding: 0.5rem 1rem;
