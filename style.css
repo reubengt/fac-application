@@ -82,6 +82,7 @@ html{
 	opacity: 0;
 	transition: opacity 0s;
 	outline: none;
+	border: 1px solid #1ec503;
 	font-family: 'Source Code Pro', monospace;
 	/*extra left and right margin to make sure the button wraps to new line*/
 	margin: 0px 10vw 120px;
@@ -89,17 +90,17 @@ html{
 	font-size: 1.6rem;
 	border-radius: 4px;
 	padding: 0.5rem 1rem;
-	color: white;
-	background-color: #2E294E;
+	color: #1ec503;
+	background-color: black;
 	box-shadow: 0 0 25px 4px rgba(0, 0, 0, 0.2);
 }
 .scrollbtn:active{
 	transform: scale(0.98);
 }
 .scrollbtn:hover {
-  color: #2E294E;
+  color: black;
   border-color: currentColor;
-  background-color: white;
+  background-color: #1ec503;
 }
 .main-page{
 	height: 100vh;
