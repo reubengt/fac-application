@@ -43,7 +43,7 @@ table {
 	border-spacing: 0;
 }
 /*global box-sizing*/
-html{
+*{
 	scroll-behavior: smooth;
   box-sizing: border-box;
   font-size: 10px;
@@ -105,10 +105,43 @@ html{
 .main-page{
 	height: 100vh;
 	background-color: #2E294E;
+	display: grid;
+	grid-template-columns: 30vw 70vw;
+	grid-template-rows: 20vh 70vh 10vh;
+	grid-template-areas: "piano-nav piano-nav"
+	                     "main      main     "
+											 "links     links    ";
 }
-.main-page nav ul{
-	width: 100%;
-	height: auto;
+.piano-nav{
+	grid-area: piano-nav;
+	background-color: #2E294E;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+}
+.white-key{
+	background-color: white;
+	border: 3px solid #2E294E;
+	border-radius: 8px;
+	flex: 1;
+	height: 100%;
+}
+.black-key{
+    position: relative;
+    height: 70%;
+    background-color: black;
+    color: white;
+    width: 10%;
+    margin: 0 -5%;
+		border-radius: 5px;
+}
+.content{
+	grid-area: main;
+}
+.links{
+	grid-area: links;
+}
+.links ul{
 	display: flex;
 	flex:1;
 	flex-wrap: nowrap;
@@ -116,17 +149,52 @@ html{
 	align-items: center;
 	background-color: #1B998B;
 }
-.main-page nav li{
-	width: 80px;
-  height: auto;
+.links li{
+	width: 10vh;
+  height: 10vh;
 	list-style: none;
-	padding: 10px;
+	padding: 1vh;
 	flex:0 1 auto;
 }
-.main-page nav li:hover{
+.links li:hover{
 	filter: invert(100%);
 }
-@media only screen and (min-width: 320px)  { html{ font-size: 10px; } }
-@media only screen and (min-width: 768px)  { html{ font-size: 14px; } }
-@media only screen and (min-width: 1024px) { html{ font-size: 18px; } }
-@media only screen and (min-width: 1900px) { html{ font-size: 20px; } }
+
+@media only screen and (min-width: 320px){
+	html{
+		font-size: 10px;
+	}
+}
+@media only screen and (min-width: 640px){
+	html{
+		 font-size: 14px;
+	 }
+	 .main-page{
+		 grid-template-areas:"piano-nav  main "
+	 	                     "piano-nav  main "
+	 											 "piano-nav links";
+	 }
+	 .piano-nav{
+		 flex-direction: column-reverse;
+	 }
+	 .white-key{
+		 width: 100%;
+		 height: 100%;
+		 border-right: none;
+	 }
+	 .black-key{
+		 width: 70%;
+		 height: 10vh;
+		 margin: -5vh 0;
+	 }
+}
+@media only screen and (min-width: 1024px){
+	html{
+		 font-size: 18px;
+	 }
+}
+@media only screen and (min-width: 1900px){
+	html{
+		 font-size: 20px;
+	 }
+}
