@@ -79,13 +79,14 @@ html{
 	overflow: hidden;
 }
 .scrollbtn{
+	opacity: 0;
+	transition: opacity 2s;
 	outline: none;
 	font-family: 'Source Code Pro', monospace;
 	/*extra left and right margin to make sure the button wraps to new line*/
-	margin: 0px 50px 10vw;
+	margin: 0px 10vw 120px;
 	align-self: flex-end;
 	font-size: 1.6rem;
-  border: solid 2px transparent;
 	border-radius: 4px;
 	padding: 0.5rem 1rem;
 	color: white;
