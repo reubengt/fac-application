@@ -46,7 +46,9 @@ table {
 *{
 	scroll-behavior: smooth;
   box-sizing: border-box;
-  font-size: 10px;
+}
+html{
+	font-size: 1vmin;
 }
 /*landing page (header) styles*/
 .landing-page{
@@ -63,31 +65,31 @@ table {
   height: auto;
   overflow: hidden;
   background: black;
-  margin:0 auto;
+  margin:3rem auto;
   box-shadow: 0 0 25px 8px rgba(0, 0, 0, 0.3);
 }
 .code-window p{
   font-family: 'Source Code Pro', monospace;
   color: #1ec503;
 	width: auto;
-	margin-bottom: 0.2rem;
-  font-size: 1rem;
-	letter-spacing: 0.05em;
-	line-height: 1.2rem;
+	margin-bottom: 0.6rem;
+  font-size: 2.2rem;
+	letter-spacing: 0.15rem;
+	line-height: 3.6rem;
 	padding-left: 4ch;
 	text-indent: -4ch;
 	overflow: hidden;
 }
 .scrollbtn{
-	opacity: 0;
+	opacity: 1;
 	transition: opacity 0s;
 	outline: none;
 	border: 1px solid #1ec503;
 	font-family: 'Source Code Pro', monospace;
 	/*extra left and right margin to make sure the button wraps to new line*/
-	margin: 0px 10vw 120px;
-	align-self: flex-end;
-	font-size: 1.6rem;
+	margin: 0px 10vw;
+	/* align-self: flex-end; */
+	font-size: 2.2rem;
 	border-radius: 4px;
 	padding: 0.5rem 1rem;
 	color: #1ec503;
@@ -159,16 +161,7 @@ table {
 .links li:hover{
 	filter: invert(100%);
 }
-
-@media only screen and (min-width: 320px){
-	html{
-		font-size: 10px;
-	}
-}
 @media only screen and (min-width: 640px){
-	html{
-		 font-size: 14px;
-	 }
 	 .main-page{
 		 grid-template-areas:"piano-nav  main "
 	 	                     "piano-nav  main "
@@ -186,15 +179,5 @@ table {
 		 width: 70%;
 		 height: 10vh;
 		 margin: -5vh 0;
-	 }
-}
-@media only screen and (min-width: 1024px){
-	html{
-		 font-size: 18px;
-	 }
-}
-@media only screen and (min-width: 1900px){
-	html{
-		 font-size: 20px;
 	 }
 }
