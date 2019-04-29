@@ -146,7 +146,6 @@ html{
 }
 .card-container{
 	position: relative;
-	background-color: rgba(189,213,234,0.15);
 	height: 90%;
 	width: 90%;
 	border-radius: 5px;
@@ -190,9 +189,9 @@ html{
 .intro{
 	align-items: start;
 	font-family: 'Exo 2', sans-serif;
-	font-size: 2rem;
-	line-height: 2.5rem;
-	height:69%;
+	font-size: 3rem;
+	line-height: 3.5rem;
+	height:70%;
 	margin-top: 4rem;
 	overflow-y: scroll;
 }
@@ -217,11 +216,15 @@ html{
 	background-color: #4F759B;
 }
 .links li{
+	border: 2px solid red;
 	width: 10vh;
   height: 10vh;
 	list-style: none;
 	padding: 1vw;
 	flex:0 1 auto;
+}
+.links li img{
+	width: 100%;
 }
 .links li:hover{
 	filter: invert(100%);
@@ -244,5 +247,9 @@ html{
 		 width: 70%;
 		 height: 10vh;
 		 margin: -5vh 0;
+	 }
+	 .intro{
+		 font-size: 2rem;
+		 line-height: 2.5rem;
 	 }
 }
