@@ -153,11 +153,12 @@ html{
 	box-shadow: 0 0 20px 8px rgba(0, 0, 0, 0.2);
 }
 .card{
-	border: 2px solid red;
+	/* border: 2px solid red; */
   position: absolute;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
+	align-items: space-between;
 	padding: 50px;
 	width: 100%;
 	height: 100%;
@@ -165,7 +166,7 @@ html{
 	bottom: 0px;
 }
 .card>*{
-	border: 2px solid red;
+	/* border: 2px solid red; */
 	display: flex;
 	min-width: 100%;
 	align-items: center;
@@ -178,7 +179,7 @@ html{
 }
 .card h1{
 	flex-basis: 80%;
-	margin-left: 10vw;
+	margin-left: 5vw;
 
 }
 .card img{
@@ -188,6 +189,25 @@ html{
 	border-radius: 75% 10px 5px 10px;
 	box-shadow: 0 0 15px 3px rgba(0, 0, 0, 0.3);
 	transform: rotate(-45deg);
+}
+.intro{
+	align-items: start;
+	font-family: 'Exo 2', sans-serif;
+	font-size: 2rem;
+	line-height: 2.5rem;
+	height:69%;
+	margin-top: 4rem;
+	overflow-y: scroll;
+}
+.intro::-webkit-scrollbar {
+  width: 10px;
+	border-radius: 5px;
+	background-color: rgba(189,213,234,0.10)
+}
+.intro::-webkit-scrollbar-thumb {
+  width: 10px;
+	border-radius: 5px;
+	background-color: rgba(189,213,234,0.3)
 }
 .links{
 	grid-area: links;
