@@ -34,3 +34,54 @@ function typeline() {
   }
 }
 typeline();
+
+window.addEventListener('keydown',function(e){
+  const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+  const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
+  if(!audio) return;
+  if(key.classList.contains('playing')==false)
+  {
+  audio.currentTime=0;
+  audio.play();
+  key.classList.add('playing');
+  }
+});
+window.addEventListener('keyup',function(e){
+  const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
+  key.classList.remove('playing');
+});
+let piano=document.querySelector('.piano-nav');
+//touch events
+piano.addEventListener('touchstart', function(e){
+  const audio = document.querySelector(`audio[data-key="${e.target.getAttribute('data-key')}"]`);
+  const key = document.querySelector(`.key[data-key="${e.target.getAttribute('data-key')}"]`);
+  console.log(key);
+  if(!audio) return;
+  audio.currentTime=0;
+  audio.play();
+  if(key.classList.contains('playing')==false)
+  {
+  key.classList.add('playing');
+  }
+});
+piano.addEventListener('touchend', function(e){
+  const key = document.querySelector(`.key[data-key="${e.target.getAttribute('data-key')}"]`);
+  key.classList.remove('playing');
+});
+//click events
+piano.addEventListener('mousedown', function(e){
+  const audio = document.querySelector(`audio[data-key="${e.target.getAttribute('data-key')}"]`);
+  const key = document.querySelector(`.key[data-key="${e.target.getAttribute('data-key')}"]`);
+  console.log(key);
+  if(!audio) return;
+  audio.currentTime=0;
+  audio.play();
+  if(key.classList.contains('playing')==false)
+  {
+  key.classList.add('playing');
+  }
+});
+piano.addEventListener('mouseup', function(e){
+  const key = document.querySelector(`.key[data-key="${e.target.getAttribute('data-key')}"]`);
+  key.classList.remove('playing');
+});
