@@ -53,9 +53,9 @@ window.addEventListener('keyup',function(e){
 let piano=document.querySelector('.piano-nav');
 //touch events
 piano.addEventListener('touchstart', function(e){
+  console.log('touchstart');
   const audio = document.querySelector(`audio[data-key="${e.target.getAttribute('data-key')}"]`);
   const key = document.querySelector(`.key[data-key="${e.target.getAttribute('data-key')}"]`);
-  console.log(key);
   if(!audio) return;
   audio.currentTime=0;
   audio.play();
@@ -65,23 +65,6 @@ piano.addEventListener('touchstart', function(e){
   }
 });
 piano.addEventListener('touchend', function(e){
-  const key = document.querySelector(`.key[data-key="${e.target.getAttribute('data-key')}"]`);
-  key.classList.remove('playing');
-});
-//click events
-piano.addEventListener('mousedown', function(e){
-  const audio = document.querySelector(`audio[data-key="${e.target.getAttribute('data-key')}"]`);
-  const key = document.querySelector(`.key[data-key="${e.target.getAttribute('data-key')}"]`);
-  console.log(key);
-  if(!audio) return;
-  audio.currentTime=0;
-  audio.play();
-  if(key.classList.contains('playing')==false)
-  {
-  key.classList.add('playing');
-  }
-});
-piano.addEventListener('mouseup', function(e){
   const key = document.querySelector(`.key[data-key="${e.target.getAttribute('data-key')}"]`);
   key.classList.remove('playing');
 });
